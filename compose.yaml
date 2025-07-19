@@ -1,0 +1,8 @@
+services:
+  redis_server.com:
+    container_name: redis
+    image: redis:latest
+    environment:
+      REDIS_PORT: ${REDIS_PORT}
+    ports:
+      - ${REDIS_PORT}:${REDIS_PORT}

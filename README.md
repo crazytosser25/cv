@@ -7,3 +7,9 @@ This will be small FastAPI server just to show my CV and give paar links to down
   2. start app:
      ```python start.py```
       
+TO DO:
+- confirm dates
+- change order of works and edusation
+- change greeting
+- add hobbys
+- update docs

@@ -91,6 +91,10 @@ async def favicon():
 async def css():
     return FileResponse("static/css/styles.css")
 
+@service_router.get("/css/normal.css", dependencies=[Depends(RateLimiter(times=5, seconds=30))])
+async def css_normalizer():
+    return FileResponse("static/css/normal.css")
+
 @service_router.get("/images/photo", dependencies=[Depends(RateLimiter(times=5, seconds=30))])
 async def photo():
     return FileResponse("static/images/photo_jask.jpg")
